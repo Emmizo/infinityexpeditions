@@ -1,0 +1,1433 @@
+/*
+Theme Name: Twenty Twenty-Four Child
+Theme URI: https://wordpress.org/themes/twentytwentyfour/
+Template: twentytwentyfour
+Author: the WordPress team
+Author URI: https://wordpress.org
+Description: Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
+Tags: one-column,custom-colors,custom-menu,custom-logo,editor-style,featured-images,full-site-editing,block-patterns,rtl-language-support,sticky-post,threaded-comments,translation-ready,wide-blocks,block-styles,style-variations,accessibility-ready,blog,portfolio,news
+Version: 1.2.1731071808
+Updated: 2024-11-08 13:16:48
+
+*/
+
+@font-face {
+    font-family: "ACaslonPro-Semibold";
+    src: url("https://db.onlinewebfonts.com/t/0fa3b480484a4c8774b165052afd4c40.eot");
+    src: url("https://db.onlinewebfonts.com/t/0fa3b480484a4c8774b165052afd4c40.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/0fa3b480484a4c8774b165052afd4c40.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/0fa3b480484a4c8774b165052afd4c40.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/0fa3b480484a4c8774b165052afd4c40.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/0fa3b480484a4c8774b165052afd4c40.svg#ACaslonPro-Semibold")format("svg");
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-color: #fff;
+}
+h1, h2, h3, h4, h5, h6, p, a, span, div, ul, li {
+    font-family: "Be Vietnam Pro", sans-serif;
+    margin: 0px;
+}
+img {
+    max-width: 100%;
+}
+.della-header {
+    background-color: #0B1D13FF;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    /* background-image: url('http://localhost/websites/infinityexpeditions/wp-content/uploads/2024/10/top-bar-image.png'); */
+    /* background-color:green !important; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.custom-container {
+    max-width: 1280px;
+    margin: auto;
+}
+@media (max-width: 1399px) {
+    .custom-container {
+        max-width: 1170px;
+    }
+}
+@media (min-width: 1600px) {
+    .custom-container {
+        max-width: 1360px;
+    }
+}
+.della-menu ul {
+    padding: 0px;
+    text-align: right;
+    margin: 30px 0px;
+}
+.della-menu ul li {
+    list-style: none;
+    display: inline-block;
+}
+header .della-menu li a {
+    color: #d6cfc4;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 6px 12px;
+    font-weight: normal;
+    display: inline-block;
+    background-color: transparent !important;
+    transition: 0.3s all ease;
+}
+header .della-menu li a:hover {
+    color: #b24f2a;
+}
+header .della-menu {
+    align-items: center;
+    display: flex;
+    justify-content: end;
+}
+header .della-menu li a.btn-contact,
+header .della-menu .custom-header-menu > li:last-child a {
+    border: solid 3px #fff;
+    background-color: transparent;
+    min-width: 137px;
+    min-height: 49px;
+    text-align: center;
+    padding: 7px 10px;
+}
+header .della-menu li {
+    margin-left: 15px;
+}
+.menu-toggle-icon {
+    display: none;
+}
+header a.della-header_logo,
+header a.della-header_logo:focus {
+    background-color: transparent !important;
+    display: inline-block;
+}
+header a.della-header_logo img {
+    max-width: 229px;
+    max-height: 108px;
+}
+@media (min-width: 768px) {
+    header .della-menu .custom-header-menu > li:last-child a:hover {
+        border: solid 3px #b24f2a;
+        color: #b24f2a;
+    }
+}
+@media (min-width: 1500px) {
+    header .della-menu li a {
+        font-size: 18px;
+    }
+}
+
+
+/*common css*/
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col,.col-1,.col-10,.col-11,.col-12,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-auto,.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-auto,.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-auto,.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-auto{
+    position:relative;
+    width:100%;
+    padding-right:15px;
+    padding-left:15px
+}
+.col{
+    -ms-flex-preferred-size:0;
+    flex-basis:0;
+    -ms-flex-positive:1;
+    flex-grow:1;
+    max-width:100%
+}
+.col-1{
+    -ms-flex:0 0 8.333333%;
+    flex:0 0 8.333333%;
+    max-width:8.333333%
+}
+.col-2{
+    -ms-flex:0 0 16.666667%;
+    flex:0 0 16.666667%;
+    max-width:16.666667%
+}
+.col-3{
+    -ms-flex:0 0 25%;
+    flex:0 0 25%;
+    max-width:25%
+}
+.col-4{
+    -ms-flex:0 0 33.333333%;
+    flex:0 0 33.333333%;
+    max-width:33.333333%
+}
+.col-5{
+    -ms-flex:0 0 41.666667%;
+    flex:0 0 41.666667%;
+    max-width:41.666667%
+}
+.col-6{
+    -ms-flex:0 0 50%;
+    flex:0 0 50%;
+    max-width:50%
+}
+.col-7{
+    -ms-flex:0 0 58.333333%;
+    flex:0 0 58.333333%;
+    max-width:58.333333%
+}
+.col-8{
+    -ms-flex:0 0 66.666667%;
+    flex:0 0 66.666667%;
+    max-width:66.666667%
+}
+.col-9{
+    -ms-flex:0 0 75%;
+    flex:0 0 75%;
+    max-width:75%
+}
+.col-10{
+    -ms-flex:0 0 83.333333%;
+    flex:0 0 83.333333%;
+    max-width:83.333333%
+}
+.col-11{
+    -ms-flex:0 0 91.666667%;
+    flex:0 0 91.666667%;
+    max-width:91.666667%
+}
+.col-12{
+    -ms-flex:0 0 100%;
+    flex:0 0 100%;
+    max-width:100%
+}
+@media (min-width:576px){
+    .col-sm{
+        -ms-flex-preferred-size:0;
+        flex-basis:0;
+        -ms-flex-positive:1;
+        flex-grow:1;
+        max-width:100%
+    }
+    .col-sm-1{
+        -ms-flex:0 0 8.333333%;
+        flex:0 0 8.333333%;
+        max-width:8.333333%
+    }
+    .col-sm-2{
+        -ms-flex:0 0 16.666667%;
+        flex:0 0 16.666667%;
+        max-width:16.666667%
+    }
+    .col-sm-3{
+        -ms-flex:0 0 25%;
+        flex:0 0 25%;
+        max-width:25%
+    }
+    .col-sm-4{
+        -ms-flex:0 0 33.333333%;
+        flex:0 0 33.333333%;
+        max-width:33.333333%
+    }
+    .col-sm-5{
+        -ms-flex:0 0 41.666667%;
+        flex:0 0 41.666667%;
+        max-width:41.666667%
+    }
+    .col-sm-6{
+        -ms-flex:0 0 50%;
+        flex:0 0 50%;
+        max-width:50%
+    }
+    .col-sm-7{
+        -ms-flex:0 0 58.333333%;
+        flex:0 0 58.333333%;
+        max-width:58.333333%
+    }
+    .col-sm-8{
+        -ms-flex:0 0 66.666667%;
+        flex:0 0 66.666667%;
+        max-width:66.666667%
+    }
+    .col-sm-9{
+        -ms-flex:0 0 75%;
+        flex:0 0 75%;
+        max-width:75%
+    }
+    .col-sm-10{
+        -ms-flex:0 0 83.333333%;
+        flex:0 0 83.333333%;
+        max-width:83.333333%
+    }
+    .col-sm-11{
+        -ms-flex:0 0 91.666667%;
+        flex:0 0 91.666667%;
+        max-width:91.666667%
+    }
+    .col-sm-12{
+        -ms-flex:0 0 100%;
+        flex:0 0 100%;
+        max-width:100%
+    }
+}
+@media (min-width:768px){
+    .col-md{
+        -ms-flex-preferred-size:0;
+        flex-basis:0;
+        -ms-flex-positive:1;
+        flex-grow:1;
+        max-width:100%
+    }
+    .col-md-1{
+        -ms-flex:0 0 8.333333%;
+        flex:0 0 8.333333%;
+        max-width:8.333333%
+    }
+    .col-md-2{
+        -ms-flex:0 0 16.666667%;
+        flex:0 0 16.666667%;
+        max-width:16.666667%
+    }
+    .col-md-3{
+        -ms-flex:0 0 25%;
+        flex:0 0 25%;
+        max-width:25%
+    }
+    .col-md-4{
+        -ms-flex:0 0 33.333333%;
+        flex:0 0 33.333333%;
+        max-width:33.333333%
+    }
+    .col-md-5{
+        -ms-flex:0 0 41.666667%;
+        flex:0 0 41.666667%;
+        max-width:41.666667%
+    }
+    .col-md-6{
+        -ms-flex:0 0 50%;
+        flex:0 0 50%;
+        max-width:50%
+    }
+    .col-md-7{
+        -ms-flex:0 0 58.333333%;
+        flex:0 0 58.333333%;
+        max-width:58.333333%
+    }
+    .col-md-8{
+        -ms-flex:0 0 66.666667%;
+        flex:0 0 66.666667%;
+        max-width:66.666667%
+    }
+    .col-md-9{
+        -ms-flex:0 0 75%;
+        flex:0 0 75%;
+        max-width:75%
+    }
+    .col-md-10{
+        -ms-flex:0 0 83.333333%;
+        flex:0 0 83.333333%;
+        max-width:83.333333%
+    }
+    .col-md-11{
+        -ms-flex:0 0 91.666667%;
+        flex:0 0 91.666667%;
+        max-width:91.666667%
+    }
+    .col-md-12{
+        -ms-flex:0 0 100%;
+        flex:0 0 100%;
+        max-width:100%
+    }
+}
+@media (min-width:992px){
+    .col-lg{
+        -ms-flex-preferred-size:0;
+        flex-basis:0;
+        -ms-flex-positive:1;
+        flex-grow:1;
+        max-width:100%
+    }
+    .col-lg-1{
+        -ms-flex:0 0 8.333333%;
+        flex:0 0 8.333333%;
+        max-width:8.333333%
+    }
+    .col-lg-2{
+        -ms-flex:0 0 16.666667%;
+        flex:0 0 16.666667%;
+        max-width:16.666667%
+    }
+    .col-lg-3{
+        -ms-flex:0 0 25%;
+        flex:0 0 25%;
+        max-width:25%
+    }
+    .col-lg-4{
+        -ms-flex:0 0 33.333333%;
+        flex:0 0 33.333333%;
+        max-width:33.333333%
+    }
+    .col-lg-5{
+        -ms-flex:0 0 41.666667%;
+        flex:0 0 41.666667%;
+        max-width:41.666667%
+    }
+    .col-lg-6{
+        -ms-flex:0 0 50%;
+        flex:0 0 50%;
+        max-width:50%
+    }
+    .col-lg-7{
+        -ms-flex:0 0 58.333333%;
+        flex:0 0 58.333333%;
+        max-width:58.333333%
+    }
+    .col-lg-8{
+        -ms-flex:0 0 66.666667%;
+        flex:0 0 66.666667%;
+        max-width:66.666667%
+    }
+    .col-lg-9{
+        -ms-flex:0 0 75%;
+        flex:0 0 75%;
+        max-width:75%
+    }
+    .col-lg-10{
+        -ms-flex:0 0 83.333333%;
+        flex:0 0 83.333333%;
+        max-width:83.333333%
+    }
+    .col-lg-11{
+        -ms-flex:0 0 91.666667%;
+        flex:0 0 91.666667%;
+        max-width:91.666667%
+    }
+    .col-lg-12{
+        -ms-flex:0 0 100%;
+        flex:0 0 100%;
+        max-width:100%
+    }
+}
+
+.della-banner {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 763px;
+}
+.della-banner h1 {
+    font-size: 56px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 65px;
+    letter-spacing: -2.5px;
+    text-align: left;
+    color: #002646;
+    max-width: 366px;
+    padding-bottom: 23px;
+    word-break: break-word;
+}
+.della-banner h1 p {
+    font-size: 62.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.16;
+    letter-spacing: -2.5px;
+    text-align: left;
+    color: #002646;
+    word-break: break-word;
+    margin-bottom: 0px;
+}
+.btn {
+    padding: 10px 10px;
+    border-radius: 1px;
+    background-color: #b24f2a;
+    font-size: 16.5px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -0.37px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s all ease;
+    min-width: 166px;
+    min-height: 49px;
+    text-align: center;
+}
+.btn:hover,
+.btn:focus {
+    background-color: rgb(178, 79, 42, 0.8) !important;
+}
+.della-banner .della-banner-content {
+    background-color: rgb(255, 255, 255, 0.8);
+    margin-top: 140px;
+    padding-top: 75px;
+    padding-bottom: 56px;
+    position: relative;
+}
+.della-banner {
+    overflow: hidden;
+}
+.della-banner .della-banner-content:before {
+    content: '';
+    background-color: rgb(255, 255, 255, 0.8);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0px;
+}
+.della-banner .della-banner-content .btn-primary {
+    min-width: 166px;
+    min-height: 48px;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.secure-sec {
+    padding: 58px 0px 56px;
+    text-align: center;
+}
+.secure-sec h2 {
+    font-size: 29px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 33px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #b24f2a;
+    margin-bottom: 10px;
+    font-family: "ACaslonPro-Semibold";
+}
+.secure-sec p {
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 29px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    max-width: 1000px;
+    margin: 0px auto 10px;
+}
+.btn-get-started {
+    color: #b24f2a;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 20px;
+
+}
+.btn-get-started:before {
+    content: "\f0a9";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    top: 2px;
+    left: 0px;
+}
+
+p {
+    margin: 0px 0px 15px;
+}
+.della-estate-sec {
+    background-color: #faf8f7;
+    padding: 103px 0px;
+}
+.della-estate-sec h2 {
+    font-size: 45px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 57.5px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #002646;
+    max-width: 850px;
+    margin: 0px auto 15px;
+}
+.della-estate-sec .della-estate-contant p {
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    max-width: 930px;
+    margin: auto;
+}
+.della-estate-row {
+    margin-top: 54px;
+}
+.della-estate-row > div {
+    text-align: center;
+}
+.della-estate-row h3 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.07;
+    color: #b24f2a;
+    text-align: left;
+    margin: 0px;
+    padding-top: 33px;
+    padding-bottom: 10px;
+    font-family: "ACaslonPro-Semibold";
+}
+.della-estate-row p {
+    font-size: 15px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+.della-estate-row img {
+    margin: auto;
+    max-height: 77px;
+}
+.della-estate-row .cs-img-box-1 img {
+    max-width: 65px;
+    max-height: 63px;
+}
+.della-estate-row .cs-img-box-2 img {
+    max-width: 67px;
+    max-height: 65px;
+}
+.della-estate-row .cs-img-box-3 img {
+    max-width: 68px;
+    max-height: 70px;
+}
+
+.della-tell-sec {
+    padding: 82px 0px;
+    background-color: #eee9e4;
+    text-align: center;
+}
+.della-tell-sec h3 {
+    font-size: 29px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #b24f2a;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    font-family: "ACaslonPro-Semibold";
+}
+.della-tell-sec p {
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.68;
+    letter-spacing: normal;
+    text-align: center;
+    color: #002646;
+    margin-bottom: 20px;
+}
+/*.della-tell-sec a.btn {
+    min-width: 166px;
+    text-align: center;
+}*/
+.why-della-sec {
+    padding: 79px 0px 61px;
+    background-color: #0B1D13FF;
+    /* background-image: url('http://localhost/websites/infinityexpeditions/wp-content/uploads/2024/10/top-bar-image.png'); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.why-della-sec h2 {
+    font-size: 45px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 53px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.why-della-sec p {
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+.della-grid-sec {
+    padding: 69px 0px;
+}
+.della-grid-sec .inner-grid {
+    width: 20%;
+    max-width: 20%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.della-grid-sec .inner-grid h3 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.07;
+    color: #b24f2a;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-family: "ACaslonPro-Semibold";
+}
+.della-grid-sec .inner-grid p {
+    font-size: 15px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.55;
+    letter-spacing: normal;
+    text-align: left;
+    color: #002646;
+}
+.della-grid-sec .inner-grid img {
+    margin-bottom: 20px;
+    max-width: 175px;
+    max-height: 107px;
+}
+
+.della-slider {
+    border-radius: 1px;
+    background-color: #00294e;
+    padding: 128px 0px 123px;
+    position: relative;
+    border-top: 79px solid #efece7;
+    border-bottom: 76px solid #efece7;
+}
+.della-slider .testimonials-content {
+    max-width: 800px;
+    margin: auto;
+}
+.della-slider .slick-slide {
+    text-align: center;
+}
+.della-slider p {
+    font-size: 25px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.59;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+.della-slider h6 {
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.67;
+    color: #fff;
+    margin: 0px;
+    font-family: "ACaslonPro-Semibold";
+}
+.della-slider .slick-arrow {
+    display: none !important;
+}
+.della-slider .slick-dots li button:before {
+    content: '';
+    opacity: 0.5;
+    border: solid 4px #ede9e4;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+}
+.della-slider .slick-dots li.slick-active button:before {
+    opacity: 1;
+    background-color: #fff;
+    border: solid 4px #fff;
+}
+.della-slider .slick-dots li button {
+    width: 16px;
+    height: 16px;
+}
+.della-slider .slick-dots {
+    bottom: -70px;
+}
+
+
+
+.della-exper-left {
+    background-color: #0B1D13FF;;
+    padding: 171px 70px;
+    /* background-image: url('http://localhost/websites/infinityexpeditions/wp-content/uploads/2024/10/experience-bg.png'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.della-experience .row {
+    margin: 0px;
+}
+.della-exper-left h3 {
+    font-size: 45px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.della-exper-left p {
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+}
+.della-exper-right {
+    padding: 91px 64px;
+}
+.della-exper-right h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.13;
+    color: #b24f2a;
+    font-family: "ACaslonPro-Semibold";
+}
+.della-exper-right h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    color: #002646;
+    margin-bottom: 20px;
+}
+.della-exper-right p {
+    font-size: 15px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.55;
+    letter-spacing: normal;
+    text-align: left;
+    color: #002646;
+    margin-bottom: 20px;
+}
+.della-exper-right .inner-content > img {
+    margin-bottom: 28px;
+    max-width: 262px;
+    max-height: 233px;
+}
+
+.della-experience .btn-get-started {
+    padding-left: 11px;
+    font-size: 16px;
+}
+.della-experience .btn-get-started:before {
+    display: none;
+}
+.della-experience .linked-icons img {
+    margin-top: -10px;
+    max-width: 17px;
+    max-height: 18px;
+}
+
+.della-contact {
+    padding: 113px 0px 95px;
+    background-color: #f5f5f5;
+}
+.della-contact h2 {
+    font-size: 45px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: left;
+    color: #00223c;
+    margin-bottom: 15px;
+}
+.della-contact p {
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    text-align: left;
+    color: #0d284e;
+}
+.della-contact .custom-container {
+    max-width: 907px;
+}
+.della-contact .wpcf7-form {
+    padding-top: 20px;
+}
+.della-contact .wpcf7-form p.contact-title {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.07;
+    color: #b24f2a;
+    font-family: "ACaslonPro-Semibold";
+    margin-bottom: 0px;
+}
+.della-contact .wpcf7-form p.contact-sub-title {
+    font-size: 15px;
+}
+.della-contact .wpcf7-form .wpcf7-form-control-wrap input,
+.della-contact .wpcf7-form .wpcf7-form-control-wrap textarea {
+    border-radius: 1px;
+    border: solid 1px #b6b6b6;
+    background-color: #f2f2f2;
+    font-size: 17px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.58;
+    letter-spacing: normal;
+    text-align: left;
+    color: #0d284e;
+    width: 100%;
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: "Inter", sans-serif;
+    max-width: 387px;
+    max-height: 45px;
+    outline: none !important;
+}
+.della-contact .wpcf7-form .row-contact .row-name-email,
+.della-contact .wpcf7-form .row-contact .row-tel-content {
+    width: 45%;
+    max-width: 45%;
+    padding: 0px 15px;
+}
+.della-contact .wpcf7-form .wpcf7-form-control-wrap textarea {
+    max-height: 107px;
+}
+.della-contact .wpcf7-form .wpcf7-submit {
+    padding: 8px 10px;
+    border-radius: 1px;
+    border: 1px solid #b24f2a;
+    background-color: #b24f2a !important;
+    font-size: 16.5px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -0.37px;
+    color: #fff !important;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s all ease;
+    min-width: 166px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    min-height: 49px;
+}
+.della-contact .wpcf7-form .wpcf7-submit:hover {
+    background-color: rgb(178, 79, 42, 0.8) !important;
+}
+.della-contact .wpcf7-form .check-box .wpcf7-list-item {
+    width: 35px;
+}
+.della-contact .wpcf7-form .check-box .wpcf7-list-item label {
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+.della-contact .wpcf7-form .check-box .wpcf7-list-item input[type="checkbox"] {
+    height: 23px;
+    width: 23px;
+}
+.della-contact .wpcf7-form div a {
+    text-decoration: none;
+    color: #b24f2a;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+}
+.della-contact .wpcf7-form div.conditions p {
+    font-size: 13px;
+}
+.della-contact .wpcf7-form p {
+    margin-bottom: 12px;
+}
+
+
+footer {
+    background-color: #0B1D13FF;
+    padding: 91px 0px 30px;
+    /* background-image: url('http://localhost/websites/infinityexpeditions/wp-content/uploads/2024/10/footer-banner.png'); */
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+footer .footer-menu {
+    padding-bottom: 100px;
+}
+.footer-menu .footer-grid {
+    width: 20%;
+    max-width: 20%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.footer-menu .footer-grid h3 {
+    font-size: 16.5px;
+    line-height: 1.97;
+    letter-spacing: -0.37px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.footer-menu .footer-grid:first-child a {
+    background-color: transparent !important;
+}
+.footer-menu .footer-grid:first-child a img {
+    max-width: 175px;
+    max-height: 82px;
+}
+
+footer .footer-terms {
+    padding-top: 60px;
+}
+.footer-terms h4 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.36px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.footer-terms p {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.96;
+    letter-spacing: -0.27px;
+    text-align: left;
+    color: #fff;
+}
+.footer-terms p.copyright {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.35;
+    letter-spacing: -0.31px;
+    text-align: center;
+    color: #fff;
+    /*border-top: 1px solid #fff;*/
+    padding-top: 10px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+.footer-grid ul.menu {
+    padding: 0px;
+}
+.footer-grid ul.menu li {
+    list-style: none;
+}
+.footer-grid ul.menu li a,
+.footer-menu .footer-grid p,
+.footer-menu .footer-grid p a {
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.55;
+    letter-spacing: -0.33px;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent !important;
+    transition: 0.3s all ease;
+    outline: none;
+}
+.footer-grid ul.menu li a:hover {
+    color: #b24f2a;
+}
+.footer-grid.logo-column {
+	width: 18%;
+}
+.footer-grid.wide-column {
+	width: 22%;
+	max-width: 100%;
+}
+.cs-contact .cs-social-links p {
+    display: inline-block;
+}
+.cs-contact .cs-social-links a.cs-links img {
+    max-width: 20px;
+    margin-left: 5px;
+}
+.della-contact .wpcf7-not-valid-tip {
+    font-size: 15px;
+}
+
+@media (min-width: 1200px) {
+    .della-banner .della-banner-content {
+        max-width: 493px;
+    }
+    .della-grid-sec .inner-grid p {
+        max-width: 210px;
+    }
+    .della-estate-row img {
+        margin-left: 108px;
+        margin-right: unset;
+    }
+    .della-estate-row h3,
+    .della-estate-row p {
+        max-width: 310px;
+    }
+    .della-estate-row > div {
+        text-align: left;
+    }
+    /*.della-exper-right .col-md-6:last-child .inner-content > img {
+        min-width: 291px;
+        min-height: 259px;
+    }*/
+    /*.footer-grid .menu-about-us-container ul.menu li {
+        max-width: 166px;
+    }*/
+    .della-estate-row .col-md-4:last-child h3 {
+        padding-top: 30px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    .custom-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .della-exper-left,
+    .della-exper-right {
+        padding: 100px 30px;
+    }
+}
+@media (max-width: 1024px) {
+    .custom-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .della-grid-sec .inner-grid {
+        width: 33.33%;
+        max-width: 33.33%;
+    }
+    .footer-grid ul.menu li a {
+        font-size: 14px;
+    }
+    .footer-menu .footer-grid h3 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .della-banner h1,
+    .della-banner h1 p {
+        font-size: 50px;
+    }
+    .della-estate-sec h2, .why-della-sec h2, .della-exper-left h3 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .della-exper-left {
+        padding: 80px 20px;
+    }
+    .della-exper-right {
+        padding: 80px 20px;
+    }
+    header .della-menu li {
+        margin-left: 5px;
+    }
+    header .della-menu li a.btn-contact {
+        min-width: 100px;
+    }
+    .della-banner .della-banner-row .col-md-6 {
+        max-width: 500px;
+        flex: 100%;
+    }
+    .della-estate-row h3 {
+        font-size: 24px;
+    }
+    .della-experience .btn-get-started {
+        font-size: 16px;
+    }
+    .della-experience .linked-icons img {
+        margin-top: -15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    header .della-menu li {
+        margin-left: 0px;
+    }
+    header .della-menu li a.btn-contact,
+    header .della-menu .custom-header-menu > li:last-child a {
+        min-width: 100px;
+        min-height: 34px;
+        text-align: center;
+        padding: 6px 10px;
+    }
+    header .della-menu li a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .della-grid-sec .inner-grid {
+        width: 50%;
+        max-width: 50%;
+    }
+    .della-banner h1,
+    .della-banner h1 p {
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .della-estate-sec h2,
+    .why-della-sec h2,
+    .della-exper-left h3 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .della-estate-row h3,
+    .della-estate-row p {
+        text-align: center;
+    }
+    .della-estate-row > div {
+        margin-bottom: 30px;
+    }
+    .della-estate-row h3 {
+        padding-top: 25px;
+    }
+    .della-estate-sec {
+        padding: 80px 0px 40px;
+    }
+    .why-della-sec {
+        padding: 50px 0px;
+    }
+    .della-slider p {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .della-slider {
+        padding: 80px 0px 100px;
+    }
+    .della-exper-left,
+    .della-exper-right {
+        padding: 50px 20px;
+    }
+    .footer-menu .footer-grid {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    footer .footer-terms {
+        padding-top: 50px;
+    }
+    .footer-terms h4,
+    .footer-terms p {
+        text-align: center;
+    }
+    header .della-menu {
+        display: none;
+    }
+    .della-contact h2 {
+        font-size: 40px;
+    }
+    .della-contact {
+        padding: 50px 0px;
+    }
+    header a.della-header_logo img {
+        max-width: 170px;
+    }
+    .menu-toggle-icon {
+        display: inline-block;
+        background-color: transparent !important;
+        border: none !important;
+        position: absolute;
+        right: 0;
+        top: 20px;
+        outline: none !important;
+    }
+    .menu-toggle-icon div {
+        display: block;
+        width: 35px;
+        height: 3px;
+        background-color: #fff;
+        margin-bottom: 5px;
+    }
+    header .della-menu {
+        transition: 0.3s all ease;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        background-color: #fff;
+        top: 130px;
+        border-top: 3px solid #b24f2a;
+        z-index: 999;
+    }
+    header .della-menu.show {
+        display: block;
+    }
+    header .della-menu li {
+        display: block;
+        text-align: left;
+        margin-left: 0px;
+    }
+    header .della-menu li a {
+        color: #002b50;
+    }
+    header .della-menu li a.btn-contact,
+    header .della-menu .custom-header-menu > li:last-child a {
+        border: solid 3px #002b50;
+        min-width: 130px;
+        min-height: 43px;
+        text-align: center;
+        padding: 8px 10px;
+        margin-left: 10px;
+    }
+    .della-menu ul {
+        margin-top: 20px;
+    }
+    .footer-menu .footer-grid p {
+        text-align: center;
+    }
+    .della-contact .wpcf7-form .row-contact .row-name-email,
+    .della-contact .wpcf7-form .row-contact .row-tel-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0px 0px;
+    }
+    footer .footer-menu {
+        padding-bottom: 0px;
+    }
+    footer {
+        padding: 50px 0px 42px;
+        background-color: #00294e;
+        background-image: unset;
+    }
+    .footer-terms p.copyright {
+        margin-top: 30px;
+    }
+    .della-banner h1 p strong:last-child {
+        display: block;
+    }
+    .footer-grid ul.menu li a {
+        text-align: center;
+    }
+    .della-contact .wpcf7-form div.conditions .row {
+        flex-wrap: unset;
+    }
+    .della-contact .wpcf7-form .wpcf7-form-control-wrap input,
+    .della-contact .wpcf7-form .wpcf7-form-control-wrap textarea {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .della-grid-sec .inner-grid {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .della-grid-sec .inner-grid img {
+        margin-bottom: 10px;
+    }
+    .della-grid-sec .inner-grid p {
+        text-align: center;
+    }
+    .della-banner h1,
+    .della-banner h1 p {
+        font-size: 40px;
+    }
+}
+@media (min-width: 1900px) {
+    footer {
+        background-position: 100%;
+    }
+}
+
+@media (min-width: 1350px) {
+    .custom-container {
+        max-width: 1310px;
+    }
+    .della-header .custom-container {
+        padding-left: 33px;
+        padding-right: 50px;
+    }
+    .della-banner .della-banner-content {
+        padding-left: 21px;
+    }
+    .della-estate-row {
+        padding-left: 125px;
+        padding-right: 145px;
+    }
+    .della-estate-row p {
+        max-width: 280px;
+    }
+    .della-grid-sec .custom-container {
+        padding-left: 52px;
+        padding-right: 64px;
+    }
+    .footer-terms .custom-container h4,
+    .footer-terms .custom-container p {
+        padding-left: 29px;
+        padding-right: 111px;
+    }
+    .footer-terms p.copyright {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .footer-menu .custom-container {
+        padding-left: 67px;
+        padding-right: 83px;
+    }
+    .della-exper-left h3 {
+        max-width: 255px;
+    }
+    .della-experience .della-exper-left {
+        padding-left: 86px;
+    }
+    .della-exper-right .inner-content {
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .della-banner .della-banner-content {
+        max-width: 400px;
+    }
+    .della-contact .wpcf7-form .check-box .wpcf7-list-item {
+        margin-left: 0px;
+    }
+    .footer-terms p.copyright {
+        padding-top: 25px;
+    }
+}
